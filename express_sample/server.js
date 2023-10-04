@@ -8,9 +8,6 @@ dotenv.config()
 const HOST = process.env.HOST
 const PORT = process.env.PORT
 
-console.log(HOST)
-console.log(PORT)
-
 //サーバー作成
 const app = express()
 
@@ -25,3 +22,10 @@ app.get('/', (req, res) => {
     res.send('Hello!')
 })
 
+//サーバー停止　起動中のターミナルでCTRL+C
+//サーバー待機(Listen)
+app.listen(PORT, HOST, () => {
+    console.log(HOST)
+    console.log(PORT)
+    console.log('wait...')
+})

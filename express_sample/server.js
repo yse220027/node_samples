@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
     res.send('Hello!')
 })
 
+app.get('/profile', (req, res) => {
+    res.send('プロフィール!')
+})
+
 //サーバー停止　起動中のターミナルでCTRL+C
 //サーバー待機(Listen)
 app.listen(PORT, HOST, () => {

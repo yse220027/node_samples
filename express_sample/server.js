@@ -11,6 +11,9 @@ const PORT = process.env.PORT
 //サーバー作成
 const app = express()
 
+//ミドルウェア設定
+app.use(express.static(__dirname + '/public'));
+
 //GEtリクエスト処理
 app.get('/', (req, res) => {
     //リクエスト処理
